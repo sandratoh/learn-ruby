@@ -53,6 +53,17 @@ class Vehicle
   def to_s
     "is a #{self.year} #{self.color} #{self.model}."
   end
+
+  def age
+    "Your #{self.model} is #{years_old} years old."
+  end
+
+  private
+  
+  def years_old
+    Time.now.year - self.year
+  end
+
 end
 
 class MyCar < Vehicle
@@ -120,3 +131,8 @@ puts zoom_zoom.color
 puts zoom_zoom.year
 
 zoom_zoom.spray_paint('grey')
+
+puts zoom_zoom.age
+# => Your Mini Cooper is 0 years old.
+puts truck_truck.age
+# => Your Nissan Titan is 3 years old.
