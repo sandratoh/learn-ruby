@@ -61,3 +61,16 @@ puts Vehicle.total_number_of_vehicles
 
 puts truck_truck.can_tow?(125)
 # => true
+
+puts '---MyCar method lookup---'
+puts MyCar.ancestors
+
+puts ''
+
+puts '---MyTruck method lookup---'
+puts MyTruck.ancestors
+
+puts ''
+
+puts '---Vehicle method lookup---'
+puts Vehicle.ancestors
