@@ -1,3 +1,9 @@
+module Towable
+  def can_tow?(pounds)
+    pounds < 2000 ? true : false
+  end
+end
+
 class Vehicle
   attr_accessor :color
   attr_reader :year
@@ -33,6 +39,8 @@ class MyCar < Vehicle
 end
 
 class MyTruck < Vehicle
+  include Towable
+  
   NUMBER_OF_DOORS = 2
 
   def to_s
@@ -50,3 +58,6 @@ puts truck_truck
 
 puts Vehicle.total_number_of_vehicles
 # => This program has created 2 vehicles.
+
+puts truck_truck.can_tow?(125)
+# => true
