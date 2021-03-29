@@ -46,5 +46,5 @@ end
 
 MyCar.gas_milage(13, 351)     # => 27 miles per gallon of gas
 
-zoom_zoom= MyCar.new(2021, 'blue', 'Mini Cooper')
+zoom_zoom = MyCar.new(2021, 'blue', 'Mini Cooper')
 puts zoom_zoom      # => This car is a 2021 blue Mini Cooper.
